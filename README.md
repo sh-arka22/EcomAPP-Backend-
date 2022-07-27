@@ -1,114 +1,104 @@
-<h1 align="center">Ecommerce made with Node.js - MVC</h1>
+# E-Commerce Backend
+[![wakatime](https://wakatime.com/badge/github/lukecp5/e-commerce-backend.svg)](https://wakatime.com/badge/github/lukecp5/e-commerce-backend)    
 
-<p align="center">	
-   <a href="https://www.linkedin.com/in/rafael-goulartb/">
-      <img alt="Rafael Goulart" src="https://img.shields.io/badge/-RafaelGoulartB-03B0E8?style=flat&logo=Linkedin&logoColor=white" />
-   </a>
-  <a href="https://github.com/RafaelGoulartB/nodejs-ecommerce#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-03B0E8.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/RafaelGoulartB/nodejs-ecommerce/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-03B0E8.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/RafaelGoulartB/nodejs-ecommerce/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-03B0E8.svg" target="_blank" />
-  </a>
-  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/RafaelGoulartB/nodejs-ecommerce?color=03B0E8" />
-  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/RafaelGoulartB/nodejs-ecommerce?color=03B0E8" />
-  <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/nodejs-ecommerce?color=03B0E8" />
-</p>
+Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. The goal of this project was to understand the fundamental architecture of these platforms. 
 
-> Ecommerce made with Node.js - MVC
+The E-Commerce Backend is a REST API for an internet retail website. The API is built onto an Express.js server that uses [Sequelize](https://sequelize.org/master/) to interact with a MySQL database. Sequelize is a promise-based Node.js ORM(Object Relation Mapping) for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 
-<div align="center">
-  <sub>The ecommerce project. Built with ❤︎ by
-    <a href="https://github.com/RafaelGoulartB">Rafael Goulart</a> and
-    <a href="https://github.com/RafaelGoulartB/nodejs-ecommerce/graphs/contributors">
-      contributors
-    </a>
-  </sub>
-</div>
+This E-Commerce backend has the API routes that point to each of the standard [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations for each data group. The routes can be used to:
+- Create categories, products, tags
+- View categories, products, tags
+- Establish associations between the different entities
+- Update categories, products, & tags
+- Delete entries from the database
 
-<br />
-<div align="center">
-  <img src="https://github.com/RafaelGoulartB/Ecommerce-Quantum/blob/master/Ecommerce.jpg" width="720">
-</div>
+All that's missing to make this a complete E-Commerce website is a simple front-end application that makes calls to the API routes that are already built-in. If that's too much, simply try making requests to the API routes from your browser to the see the raw data that's returned.
 
 ---
 
-# :pushpin: Table of Contents
+## **Table of contents**
 
-* [Demo Website](#eyes-demo-website)
-* [Technologies](#computer-technologies)
-* [Features](#rocket-features)
-* [How to run](#construction_worker-how-to-run)
-* [Found a bug? Missing a specific feature?](#bug-issues)
-* [Contributing](#tada-contributing)
-* [License](#closed_book-license)
+- [E-Commerce Backend](#e-commerce-backend)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Demo Video](#demonstration-video)
+  - [Built With](#built-with)
+  - [License](#license)
+---
+## **Installation**
 
-<h2 align="left"> 📥 Layout available at: </h2>
-<p align="center">
-    <a title="Acess Figma Web" href="https://www.figma.com/file/fDLkOXAz4k3ILWb8PoDivJZF/E-Commerce-Quantum?node-id=0%3A1">
-        <img alt="Direct Download" src="https://img.shields.io/badge/Acess Figma Web-black?style=flat-square&logo=figma&logoColor=red" width="200px" />
-    </a>
-</p>
-
-# :eyes: Demo Website
-👉  demo: https://ecommerce-quantum.herokuapp.com/
-
-# :computer: Technologies
-This project was made using the follow technologies:
-<ul>
-  <li><a href="https://nodejs.org/en/">Node.js</a></li>
-  <li><a href="https://expressjs.com/">Express</a></li>
-  <li><a href="https://github.com/mysqljs/mysql">Mysql</a></li>
-  <li><a href="https://www.npmjs.com/package/express-handlebars">Express Handlebars</a></li>
-  <li><a href="https://eslint.org/">Eslint</a></li>
-</ul>   
-
-# :rocket: Features
-
-- List Products
-- Filter products by Category
-- Add products to Wishlist
-- Add products to Cart
-  
-# :construction_worker: How to run
-## Install
+Start with cloning this repo on your local machine:
 
 ```sh
-npm install
+$ git clone https://github.com/lukecp5/e-commerce-backend.git
+$ cd e-commerce-backend
 ```
-## Usage
 
+To install and set up the application, run:
 ```sh
-npm run start
-```
-## Dev Mode
-
-```sh
-npm run dev
+$ npm install employee-tracker
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You will also need to place a .env file in the root directory of the project, in order to connect to your MySQL database. Here's an example:
 
-# :bug: Issues
+file: .env
+```
+DB_NAME=library_db
+DB_PASSWORD=
+DB_USER=root
+```
 
-Feel free to **file a new issue** with a respective title and description on the the [NodeJS Ecommerce](https://github.com/RafaelGoulartB/nodejs-ecommerce/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+---
 
-# :tada: Contributing
-First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
+## **Usage**
+<sub><sup>This section assumes you have installed the application, and created the .env file in the root directory.</sub></sup>
 
-Here's some tips:
+To finish the set-up the application, complete the following steps:
+1. Create a MySQL database on your local machine using the *schema.sql* file located in the /db/ directory(From the MySQL CLI, source db/schema.sql)
+2. Seed the database with sample data to be used for testing purposes(Run *npm run seed* from inside the root directory of the project)
 
-* Check the [issues page](https://github.com/RafaelGoulartB/nodejs-ecommerce/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
-* Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
+Now you're ready to start the application! You can start the server by running: 
+```
+npm start
+```
 
-Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
+The server is running, now you can make requests to it through your desired method. If you're new to the backend, I suggest trying out [Postman](postman.com)
 
-# :closed_book: License
+---
 
-Released in 2020.
-This project is under the [MIT license](./LICENSE).
+## **Built With**
+* [**Node.js**](https://nodejs.org/en/about/)
+*  - [Sequelize](https://www.npmjs.com/package/sequelize)
+*  - [Express.js](https://www.npmjs.com/package/express)
+* [**Visual Studio Code**](https://code.visualstudio.com/)
 
-Made with love by [RafaelGoulartB](https://github.com/RafaelGoulartB) 🚀
+---
+
+## **Demonstration Video**
+If you'd like to see a full demo of the application, please visit the following link: [Demo Video on Google Drive](https://drive.google.com/file/d/1gdSIFayRsXjm4BekD5eJcBi1v77JLgIB/view?usp=sharing)
+
+---
+
+## **Contributing**
+
+1.  Fork it!
+2.  Create your feature branch: `git checkout -b my-new-feature`
+3.  Add your changes: `git add .`
+4.  Commit your changes: `git commit -am 'Add some feature'`
+5.  Push to the branch: `git push origin my-new-feature`
+6.  Submit a pull request :sunglasses:
+
+---
+
+## **Author**
+**Luke Poirrier**   
+LinkedIn: [@luke-poirrier](https://www.linkedin.com/in/luke-poirrier)  
+Email: [Luke@LukePoirrier.com](mailto:Luke@LukePoirrier.com)  
+Portfolio: [LukePoirrier.com](http://lukepoirrier.com)  
+
+---
+
+## **License**
+This application is licensed under the MIT License, you can find the full license information [here](http://github.com/lukecp5/employee-tracker/LICENSE.txt)
