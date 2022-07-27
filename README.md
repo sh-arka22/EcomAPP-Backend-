@@ -11,4 +11,4 @@ This E-Commerce backend has the API routes that point to each of the standard [C
 
 All that's missing to make this a complete E-Commerce website is a simple front-end application that makes calls to the API routes that are already built-in. If that's too much, simply try making requests to the API routes from your browser to the see the raw data that's returned.
 
-![Screenshot](Mind map.png)
+![Screenshot](Mind\map.png)
